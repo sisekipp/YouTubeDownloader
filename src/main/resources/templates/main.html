@@ -1,10 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="/layout/_layout">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<body>
-$END$
+<body layout:fragment="content">
+
+
+<div class="container-fluid" id="base">
+    <div class="row">
+        <div class="col-sm-offset-4 col-sm-6">
+            <form class="form-inline" method="get" action="/search">
+                <div class="form-group form-group-lg">
+                    <label class="sr-only" for="youttubeUrlInput">YouTube Video Url</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+                        <input type="text" class="form-control" id="youttubeUrlInput" name="url" placeholder="Url"/>
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-lg btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </span>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
 </body>
 </html>
